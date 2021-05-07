@@ -7,7 +7,7 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.use('/bounties', bountyRouter);
+app.use('/bounty', bountyRouter);
 
 app.listen(PORT, () => {
     console.log(`Server running on Port: ${PORT}`);
