@@ -1,13 +1,9 @@
 
-const express = require('express')
+const express = require('express');
 const todoApp = express.Router();
-const uuid = require('uuid').v4;
-uuid();
+const { v4: uuidv4 } = require('uuid');
 
-
-
-
-const list = [
+const lists = [
     
     {
         name: "Water",
@@ -43,36 +39,34 @@ const list = [
 //Get All Items
 todoApp.route("/")
     .get((req, res) => {
-    res.send(list)
-    console.error(id)
+    res.send(lists)
     })
 
 //Post Item/s
     .post((req, res) => {
     const newTodo = req.body
-    newTodo = uuidv4()
-    list.push(newTodo)
-    res.send(`Successfully added ${newTodo.name} to list!`)
-});
+    newTodo._id = uuidv4()
+    lists.push(newTodo)
+    res.send(`Successfully added ${newTodo.name} to list!`);
+})
 
 //Get One Item
-todoApp.get("/todoId", (req, res) => {
+todoApp.get('/:todoId', (req, res) => {
     const todoId = req.params.todoId
     const todo = req.body
-    todo = uuidv4()
-    const findToDo = list.find(todo => todo._id === todoId)
+    todo._id = uuidv4()
+    const findToDo = lists.find(todo => todo._id === todoId)
     res.send(findToDo)
 
-    console.debug(uuidv4);
 })
 
 //Delete Item
-todoApp.delete("/todoId", (req, res) => {
+todoApp.delete('/:todoId', (req, res) => {
     const todoId = req.params.todoId
-    const todo = req.body
-    todo = uuidv4()
-    const todoIndex = list.findIndex(todo => todo._id === todoId)
-    list.splice(todoIndex, 1)
+    const todo= req.body
+    todo._id = uuidv4()
+    const todoIndex = lists.findIndex(todo => todo._id === todoId)
+    lists.splice(todoIndex, 1)
     res.send(`List item was deleted!`)
 })
 
@@ -80,9 +74,9 @@ todoApp.delete("/todoId", (req, res) => {
 todoApp.put("/todoId", (req, res) => {
     const todoId = req.params.todoId
     const todo = req.body
-    todo = uuidv4()
-    const todoIndex = list.findIndex(todo => todo._id === todoId)
-    const updatedTodo = Object.assign(list[todoIndex], req.body) 
+    todo._id = uuidv4()
+    const todoIndex = lists.findIndex(todo => todo._id === todoId)
+    const updatedTodo = Object.assign(lists[todoIndex], req.body) 
     res.send(updatedTodo)
 })
 
