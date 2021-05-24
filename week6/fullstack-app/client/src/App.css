@@ -1,0 +1,27 @@
+html {
+    margin-left: 10%;
+    margin-top: 5%;
+   background-color: #5E6668;
+    border: 5px ridge #cf583a;
+    text-align: center;
+    width: 80%;
+    height: 75%;
+    color: white;
+    box-shadow: 3px 3px 2px grey;
+   
+}
+.title:hover{ 
+    letter-spacing: 2px 2px ;
+}
+.title {
+    color:#2E538A;
+    font-size: 100px;
+    text-shadow: 2px 1px 1px #ccfaee;
+    opacity: 0.9;
+    display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: bounce; 
+  animation-duration: 2s;
+    
+}
