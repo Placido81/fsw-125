@@ -1,0 +1,52 @@
+html {
+  text-align: center;
+  background-color: #BEB7A4;
+  margin-top: 3%;
+  padding: 0%;
+  background-color: #6B7C85;
+  border: 15px ridge #040348;
+  height: 700px;
+  width: 80%;
+  margin-left: 10%;
+  border: 5px solid #040348;
+  
+  /* #2 */
+  padding: 5px;
+  
+  
+  /* #3 */
+  outline: 5px solid hsl(0, 0%, 60%);
+  
+  /* #4 AND INFINITY!!! (CSS3 only) */
+  box-shadow:
+      0 0 0 10px hsl(0, 0%, 80%),
+      0 0 0 15px hsl(0, 0%, 90%);
+}
+
+.title {
+  text-align: center;
+  font-size: 90px;
+  font-family: 'Exo', sans-serif;
+  letter-spacing:5px;
+  text-decoration: underline;
+  color: #040348;
+  text-shadow:
+    0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93,
+    -5px 4px #cdd2d5,
+    -5px 6px #808d93,
+    -6px 5px #cdd2d5,
+    -6px 7px #808d93,
+    -7px 6px #cdd2d5,
+    -7px 8px #808d93,
+    -8px 7px #cdd2d5;
+    text-underline-offset: 3px
+
+}
