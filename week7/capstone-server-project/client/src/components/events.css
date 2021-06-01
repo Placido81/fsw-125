@@ -1,8 +1,42 @@
 .list-container {
     background-color: #426B69;
+    background-color: #6B7C85;
     opacity: 0.8;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 2px;
+    margin-top: 60px;
+    border: 4px ridge #040348;
+  
+    /* #2 */
+    padding: 5px;
+    
+    
+    /* #3 */
+    outline: 5px solid hsl(0, 0%, 60%);
+    
+    /* #4 AND INFINITY!!! (CSS3 only) */
+    box-shadow:
+        0 0 0 10px hsl(0, 0%, 80%),
+        0 0 0 15px hsl(0, 0%, 90%);
+        inset: 70%;
+        color:#040348;
+}
+h3{
+    color:#040348;
+    
+    font-size:23px;
+    text-shadow: 1px 0 1px rgba(230,241,245,0.8);
+    
+}
+h1:hover{ 
+   color:#98FB98;
+   text-shadow: 2px 1px 2px #FF0000;
+   
+
+}
+h1{ 
+    font-size:50px;
+    text-shadow: 1px 0 1px rgba(230,241,245,0.8);
+    text-decoration: underline;
 }

@@ -4,7 +4,7 @@ html {
   margin-top: 3%;
   padding: 0%;
   background-color: #6B7C85;
-  border: 15px ridge #040348;
+  
   height: 700px;
   width: 80%;
   margin-left: 10%;
@@ -22,9 +22,13 @@ html {
       0 0 0 10px hsl(0, 0%, 80%),
       0 0 0 15px hsl(0, 0%, 90%);
 }
-
+.title::first-letter{
+  font-size: 130px;
+}
 .title {
   text-align: center;
+  outline-color: crimson;
+
   font-size: 90px;
   font-family: 'Exo', sans-serif;
   letter-spacing:5px;
@@ -48,5 +52,5 @@ html {
     -7px 8px #808d93,
     -8px 7px #cdd2d5;
     text-underline-offset: 3px
-
+    
 }

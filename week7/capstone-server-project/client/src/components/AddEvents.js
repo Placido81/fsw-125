@@ -31,21 +31,21 @@ function AddEvents(props){
                     name="event"
                     value={inputs.event}
                     onChange={handleChange}
-                    placeholder="Enter Event"
+                    placeholder="Enter Event........."
                 />
                 <input
                     type="text"
                     name="description"
                     value={inputs.description}
                     onChange={handleChange}
-                    placeholder="Provide Description"
+                    placeholder="Provide Description......"
                 />
                 <input
                     type="text"
                     name="completed"
                     value={inputs.completed}
                     onChange={handleChange}
-                    placeholder="Completed? yes or no"
+                    placeholder="Completed? yes or no.."
                 />
                 <input
                     type="number"
