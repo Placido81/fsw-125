@@ -31,7 +31,9 @@ function AddEvents(props){
                     name="event"
                     value={inputs.event}
                     onChange={handleChange}
-                    placeholder="Enter Event........."
+                    placeholder="Search..."
+              onFocus={(e) => e.target.placeholder = ''}
+              onBlur={(e) => e.target.placeholder = 'Search...'}
                 />
                 <input
                     type="text"
@@ -39,6 +41,8 @@ function AddEvents(props){
                     value={inputs.description}
                     onChange={handleChange}
                     placeholder="Provide Description......"
+                    onFocus={(e) => e.target.placeholder = ''}
+                    onBlur={(e) => e.target.placeholder = 'Search...'}
                 />
                 <input
                     type="text"
@@ -46,6 +50,8 @@ function AddEvents(props){
                     value={inputs.completed}
                     onChange={handleChange}
                     placeholder="Completed? yes or no.."
+                    onFocus={(e) => e.target.placeholder = ''}
+                    onBlur={(e) => e.target.placeholder = 'Search...'}
                 />
                 <input
                     type="number"
@@ -53,6 +59,8 @@ function AddEvents(props){
                     value={inputs.date}
                     onChange={handleChange}
                     placeholder="Enter Date MMDDYYYY"
+                    onFocus={(e) => e.target.placeholder = ''}
+                    onBlur={(e) => e.target.placeholder = 'Search...'}
                 />
                 <input
                     type="text"
@@ -60,6 +68,8 @@ function AddEvents(props){
                     value={inputs.itemsNeeded}
                     onChange={handleChange}
                     placeholder="Ex. present, cake, card"
+                    onFocus={(e) => e.target.placeholder = ''}
+                    onBlur={(e) => e.target.placeholder = 'Search...'}
                 />
                 <button className="add-btn">{ props.btnText }</button>
             </form>
